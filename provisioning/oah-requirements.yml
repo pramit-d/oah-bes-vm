@@ -1,7 +1,7 @@
 ---
-- src: https://github.com/openapphack/ansible-role-oah
+- src: https://github.com/openapphack/ansible-role-bes
   version: master
-  name: oah.oah
+  name: oah.bes
 - src: https://github.com/openapphack/ansible-role-oah-shell
   version: master
   name: oah.shell
@@ -20,6 +20,6 @@
 - src: https://github.com/openapphack/ansible-role-oah-desktop
   version: master
   name: oah.desktop
-- src: https://github.com/openapphack/ansible-role-oah-atom
+- src: https://github.com/openapphack/ansible-role-oah-vscode
   version: master
-  name: oah.atom
+  name: oah.vscode
