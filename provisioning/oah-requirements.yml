@@ -1,5 +1,5 @@
 ---
-- src: https://github.com/jobyko/ansible-role-bes
+- src: https://github.com/jobyko/ansible-role-oah-bes
   version: master
   name: oah.bes
 - src: https://github.com/openapphack/ansible-role-oah-shell
