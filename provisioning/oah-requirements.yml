@@ -17,7 +17,7 @@
 - src: https://github.com/openapphack/ansible-role-oah-git
   version: master
   name: oah.git
-- src: https://github.com/openapphack/ansible-role-oah-desktop
+- src: https://github.com/jobyko/ansible-role-oah-desktop
   version: master
   name: oah.desktop
 - src: https://github.com/jobyko/ansible-role-oah-vscode
