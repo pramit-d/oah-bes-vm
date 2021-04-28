@@ -1,6 +1,6 @@
 ---
 - src: https://github.com/openapphack/ansible-role-bes
-  version: test_besvm
+  version: main
   name: oah.bes
 - src: https://github.com/openapphack/ansible-role-oah-shell
   version: master
