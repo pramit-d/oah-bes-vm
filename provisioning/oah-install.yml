@@ -21,7 +21,7 @@
     # Essential roles.
     - oah.bes
     - oah.desktop
-    - oah.vscode
+      #- oah.vscode
 
 
     # Conditionally-installed roles.
