@@ -5,7 +5,7 @@ oah_env_name: oah-bes-vm
 oah_vm_gui: true
 # `vagrant_box` .
 #vagrant_box: OAH/ubuntu1404
-vagrant_box: "ubuntu/xenial64"
+vagrant_box: "ubuntu/bionic64"
 vagrant_user: ubuntu
 oah_env_user: ubuntu
 oah_user: oahdev
@@ -40,7 +40,7 @@ vagrant_synced_folders: []
 
 # Memory and CPU to use for this VM.
 vagrant_memory: 1024
-vagrant_cpus: 2
+vagrant_cpus: 1 
 
 # # The web server software to use. Can be either 'apache' or 'nginx'.
 # oahvm_webserver: apache
