@@ -60,7 +60,7 @@ SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = vconfig['vagrant_hostname']
-  if vconfig['vagrant_ip'] == "0.0.0.0" && Vagrant.has_plugin?("vagrant-auto_network")
+  if vconfig['vagrant_ip'] == "192.168.56.1" && Vagrant.has_plugin?("vagrant-auto_network")
     config.vm.network :private_network, :ip => vconfig['vagrant_ip'], :auto_network => true
   else
     config.vm.network :private_network, ip: vconfig['vagrant_ip']
