@@ -33,6 +33,7 @@ end
  git config --global http.sslverify false
  git clone https://github.com/jobyko/oah-bes-vm.git
  mkdir -p /home/vagrant/oah-bes-vm/provisioning/roles
+ sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
  sudo apt-get update
  sudo apt-get install -y ansible
  git clone https://github.com/jobyko/ansible-role-oah-desktop.git /home/vagrant/oah-bes-vm/provisioning/roles
