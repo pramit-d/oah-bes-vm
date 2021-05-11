@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
   # Set VM name in Virtualbox
   config.vm.provider "virtualbox" do |v|
     v.name = VM_NAME
-    v.memory = 2048
+    v.memory = 6144
   end
 
 #to enable ubuntu image
