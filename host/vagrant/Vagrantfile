@@ -36,10 +36,11 @@ end
  sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
  sudo apt-get update
  sudo apt-get install -y ansible
- git clone https://github.com/jobyko/ansible-role-oah-desktop.git /home/vagrant/oah-bes-vm/provisioning/roles
- git clone https://github.com/jobyko/ansible-role-oah-bes.git /home/vagrant/oah-bes-vm/provisioning/roles
- sudo mv /home/vagrant/oah-bes-vm/provisioning/roles/ansible-role-oah-desktop /home/vagrant/oah-bes-vm/provisioning/roles/oah.desktop
- sudo mv /home/vagrant/oah-bes-vm/provisioning/roles/ansible-role-oah-bes /home/vagrant/oah-bes-vm/provisioning/roles/oah.bes
+ git clone https://github.com/jobyko/ansible-role-oah-desktop.git #/home/vagrant/oah-bes-vm/provisioning/roles
+ git clone https://github.com/jobyko/ansible-role-oah-bes.git #/home/vagrant/oah-bes-vm/provisioning/roles
+ sudo mv ansible-role-oah-desktop oah.desktop
+ sudo mv ansible-role-oah-bes oah.bes
+ sudo mv oah.bes oah.desktop /home/vagrant/oah-bes-vm/provisioning/roles
  SCRIPT
 
   config.vm.provision "shell", inline: $script
