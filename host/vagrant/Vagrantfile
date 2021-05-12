@@ -26,7 +26,6 @@ Vagrant.configure(2) do |config|
 
 
  $script = <<-'SCRIPT'
- set -x
  git config --global http.sslverify false
  git clone https://github.com/jobyko/oah-bes-vm.git
  mkdir -p /home/vagrant/oah-bes-vm/provisioning/roles
