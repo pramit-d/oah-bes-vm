@@ -3,7 +3,7 @@
 # vi: set ft=ruby :
 
 # Box / OS
-VAGRANT_BOX = 'ubuntu/bionic64'
+VAGRANT_BOX = 'hashicorp/bionic64'
 
 # Memorable name for your
 VM_NAME = 'oah-bes-vm.dev'
@@ -24,11 +24,6 @@ Vagrant.configure(2) do |config|
     v.memory = 6144
   end
 
-#to enable ubuntu image
-#i  config.vm.provider :virtualbox do |vb|
-#   vb.gui = true
-#  end
-
 
  $script = <<-'SCRIPT'
  set -x
@@ -47,6 +42,9 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", inline: $script
 
+  config.vm.provider :virtualbox do |vb|
+   vb.gui = true
+  end
 
  config.vm.provision "ansible_local" do |ansible|
      ansible.playbook = "/home/vagrant/oah-bes-vm/provisioning/oah-install.yml"
