@@ -25,17 +25,19 @@ Vagrant.configure(2) do |config|
   end
 
 #to enable ubuntu image
-  config.vm.provider :virtualbox do |vb|
-   vb.gui = true
-end
+#i  config.vm.provider :virtualbox do |vb|
+#   vb.gui = true
+#  end
+
 
  $script = <<-'SCRIPT'
+ set -x
  git config --global http.sslverify false
  git clone https://github.com/jobyko/oah-bes-vm.git
  mkdir -p /home/vagrant/oah-bes-vm/provisioning/roles
  sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
  sudo apt-get update
- sudo apt-get install -y ansible
+ sudo apt-get install -y --no-install-recommends ansible
  git clone https://github.com/jobyko/ansible-role-oah-desktop.git #/home/vagrant/oah-bes-vm/provisioning/roles
  git clone https://github.com/jobyko/ansible-role-oah-bes.git #/home/vagrant/oah-bes-vm/provisioning/roles
  sudo mv ansible-role-oah-desktop oah.desktop
@@ -45,4 +47,8 @@ end
 
   config.vm.provision "shell", inline: $script
 
+
+ config.vm.provision "ansible_local" do |ansible|
+     ansible.playbook = "/home/vagrant/oah-bes-vm/provisioning/oah-install.yml"
+  end
 end
