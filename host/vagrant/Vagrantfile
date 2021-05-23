@@ -203,11 +203,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       mount_options: synced_folder.include?('mount_options') ? synced_folder['mount_options'] : []
   end
 
-  config.vm.provision "shell", inline: $script
   # Provision using Ansible provisioner if Ansible is installed on host.
 
   if which('ansible-playbook')
     config.vm.provision "ansible" do |ansible|
+      config.vm.provision "shell", inline: $script
       ansible.playbook = "#{dir}/provisioning/oah-install.yml"
       ansible.become = true
     end
