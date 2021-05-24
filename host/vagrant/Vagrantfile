@@ -42,7 +42,7 @@ sudo apt-get install -y --no-install-recommends ansible
 
 mkdir -p $VHOME/$env_repo_name/roles
 ansible-galaxy install -r $VHOME/$env_repo_name/provisioning/oah-requirments.yml -p $VHOME/$env_repo_name/provisioning/roles
-ansilbe-playbook install -r -K $VHOME/$env_repo/name/provisioning/oah-install.yml
+ansibel-playbook install -r -K $VHOME/$env_repo/name/provisioning/oah-install.yml
 
 SCRIPT
 
