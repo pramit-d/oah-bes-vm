@@ -37,6 +37,7 @@ echo "environtment repo name :---> $env_repo_name"
 git clone $OAH_GITHUB_URL/$env_repo_name.git
 sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
 cat /etc/apt/sources.list
+sudo apt-get update
 sudo apt-get install -y --no-install-recommends ansible
 
 mkdir -p $VHOME/$env_repo_name/roles
