@@ -213,7 +213,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.become = true
     end
   else
-     config.vm.provision "shell", inline: $script_local_ansible, env: { "VHOME" => "/home/vagrant", "evn_repo_name" => ENV['env_repo_name'], "OAH_DIR" => ENV['OAH_DIR'], "OAH_GITHUB_URL" => ENV['OAH_GITHUB_URL'] } 
+     config.vm.provision "shell", inline: $script_local_ansible, env: { "VHOME" => "/home/vagrant", "env_repo_name" => ENV['env_repo_name'], "OAH_DIR" => ENV['OAH_DIR'], "OAH_GITHUB_URL" => ENV['OAH_GITHUB_URL'] } 
       #config.vm.provision "ansible_local" do |ansible|
       # ansible.playbook = "../../provisioning/oah-install.yml"
       #ansible.playbook = "../../provisioning/oah-install.yml"
