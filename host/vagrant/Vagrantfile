@@ -32,16 +32,14 @@ vconfig = YAML::load_file("#{dir}/oah-config.yml")
 
 $script_local_ansible = <<SCRIPT
 git config --global http.sslverify false
-echo "environtment repo name :---> $env_repo_name"
 git clone $OAH_GITHUB_URL/$env_repo_name.git
-#sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
+sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends ansible
 
 mkdir -p $VHOME/$env_repo_name/roles
 ansible-galaxy install -r $VHOME/$env_repo_name/provisioning/oah-requirments.yml -p $VHOME/$env_repo_name/provisioning/roles
-ansibel-playbook install -r -K $VHOME/$env_repo/name/provisioning/oah-install.yml
-
+ansible-playbook  --extra-vars "ansible_become_pass=vagrant"  $VHOME/$env_repo_name/provisioning/oah-install.yml
 SCRIPT
 
 $script = <<SCRIPT
@@ -210,7 +208,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision "ansible" do |ansible|
       config.vm.provision "shell", inline: $script
       ansible.playbook = "#{dir}/provisioning/oah-install.yml"
-      ansible.become = true
+      ansible.become = true                                                                                                                
     end
   else
      config.vm.provision "shell", inline: $script_local_ansible, env: { "VHOME" => "/home/vagrant", "env_repo_name" => ENV['env_repo_name'], "OAH_DIR" => ENV['OAH_DIR'], "OAH_GITHUB_URL" => ENV['OAH_GITHUB_URL'] } 
