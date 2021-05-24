@@ -1,7 +1,8 @@
 ---
-- hosts: all
+- hosts: localhost
   vars:
   - oah_command: install
+  - HOME: /home/vagrant
 
   vars_files:
     - ../oah-config.yml
