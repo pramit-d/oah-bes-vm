@@ -208,6 +208,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision "ansible" do |ansible|
       config.vm.provision "shell", inline: $script
       ansible.playbook = "#{dir}/provisioning/oah-install.yml"
+      ansible.galaxy_role_file = "../../provisioning/oah-requirements.yml"
       ansible.become = true                                                                                                                
     end
   else
