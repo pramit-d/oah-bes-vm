@@ -74,6 +74,7 @@ ls -al /home/vagrant/.ssh
 chmod 700 /home/vagrant/.ssh
 ls -al /home/vagrant
 sudo apt update -y
+sudo apt-get install -y --no-install-recommends ansible
 sudo apt full-upgrade -y
 sudo apt-get autoremove -y
 test -e /usr/bin/python || (sudo apt -y update && apt install -y python-minimal)
