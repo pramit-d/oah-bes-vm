@@ -14,7 +14,7 @@
 
   roles:
     # Essential roles.
-    - oah.oah
+    - oah.bes
 
     # Conditionally-installed roles.
 
