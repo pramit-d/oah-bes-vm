@@ -202,11 +202,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       create: synced_folder.include?('create') ? synced_folder['create'] : false,
       mount_options: synced_folder.include?('mount_options') ? synced_folder['mount_options'] : []
   end
-
-
-  # Provision using Ansible provisioner if Ansible is installed on host.
-  config.vm.provision "shell", inline: $script
+  
+  
   if which('ansible-playbook')
+    # Provision using Ansible provisioner if Ansible is installed on host.
+    config.vm.provision "shell", inline: $script
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "#{dir}/provisioning/oah-install.yml"
       ansible.galaxy_role_file = "../../provisioning/oah-requirements.yml"
