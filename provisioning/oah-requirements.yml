@@ -2,7 +2,7 @@
 - src: https://github.com/Be-Secure/ansible-role-oah-bes
   version: main
   name: oah.bes
- - src: https://github.com/Be-Secure/ansible-role-oah-shell
+- src: https://github.com/Be-Secure/ansible-role-oah-shell
   version: master
   name: oah.shell
 - src: https://github.com/Be-Secure/ansible-role-oah-users
