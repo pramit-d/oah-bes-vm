@@ -1,8 +1,8 @@
-## what is oah-bes-vm 
+## What is oah-bes-vm 
 
 It is a virutal machine, which will bring up the environment with BeSman tool through which user can create multiple BeSman environments. 
 
-####  How to set up environment
+##  How to set up environment
 
 ```
 cd ./provisioning
