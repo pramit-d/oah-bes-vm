@@ -1,10 +1,12 @@
-# oah-bes-vm
-OAH vm for BeS
+## what is oah-bes-vm 
 
-## This is to be used only if you do not have oah shell installed.
+It is a virutal machine, which will bring up the environment with BeSman tool through which user can create multiple BeSman environments. 
+
+####  How to set up environment
 
 ```
 cd ./provisioning
 ansible-galaxy install -r oah-requirements.yml
 
 ```
+![oah-bes-vm image](./images/bes_install.gif)
