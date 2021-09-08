@@ -18,8 +18,8 @@
   version: master
   name: oah.git
 - src: https://github.com/Be-Secure/ansible-role-oah-desktop
-  version: master
+  version: main
   name: oah.desktop
 - src: https://github.com/Be-Secure/ansible-role-oah-vscode
-  version: master
+  version: main
   name: oah.vscode
