@@ -19,13 +19,28 @@
       raw: test -e /usr/bin/python || (sudo apt -y update && apt install -y python-minimal)
     - include: tasks/init-debian.yml
       when: ansible_os_family == 'Debian'
-  roles:
-    # Essential roles.
-    - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
-    - oah.bes
-    - oah.desktop
-    - oah.shell
-      #- oah.vscode
+#   roles:
+#     # Essential roles.
+#     - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
+#     - { role: oah.bes
+#     - oah.desktop
+#     - oah.shell
+#     - oah.vscode
+  tasks:
+    - name: Include VM roles
+      include_role: "{{ item }}"
+      with_items:
+        - "oah.bes"
+        - "oah.chrome"
+        - "oah.shell"
+        - "oah.desktop"
+      when: environment is defined
+    
+    - name: Include L&F-Java-RT-env roles
+      include_role: "{{ item }}"
+      with_items:
+        - "oah.threatdragon"
+      when: environment is not defined
 
 
     # Conditionally-installed roles.
