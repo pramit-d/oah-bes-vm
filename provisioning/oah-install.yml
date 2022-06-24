@@ -24,6 +24,7 @@
       - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
     - oah.bes
     - oah.desktop
+    - oah.shell
       #- oah.vscode
 
 
