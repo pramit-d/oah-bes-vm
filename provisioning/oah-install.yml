@@ -21,7 +21,7 @@
       when: ansible_os_family == 'Debian'
   roles:
     # Essential roles.
-      - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
+    - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
     - oah.bes
     - oah.desktop
     - oah.shell
