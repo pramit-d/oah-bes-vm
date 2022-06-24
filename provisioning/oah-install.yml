@@ -8,6 +8,7 @@
     - ../oah-config.yml
 
   pre_tasks:
+    - name: tasks/bes_env_config.yml
     - name: "printing debug msg"
       become: yes
       debug:
@@ -20,8 +21,9 @@
       when: ansible_os_family == 'Debian'
   roles:
     # Essential roles.
-    - oah.bes
-    - oah.desktop
+      - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
+#     - oah.bes
+#     - oah.desktop
       #- oah.vscode
 
 
