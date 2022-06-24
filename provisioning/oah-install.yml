@@ -22,8 +22,8 @@
   roles:
     # Essential roles.
       - { role: oah.threatdragon, when: BESMAN_ENV == 'lf-java-RT' }
-#     - oah.bes
-#     - oah.desktop
+    - oah.bes
+    - oah.desktop
       #- oah.vscode
 
 
