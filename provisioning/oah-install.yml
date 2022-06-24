@@ -8,7 +8,7 @@
     - ../oah-config.yml
 
   pre_tasks:
-#     - import_tasks: tasks/bes_env_config.yml
+    - import_tasks: tasks/bes_env_config.yml
     - name: "printing debug msg"
       become: yes
       debug:
