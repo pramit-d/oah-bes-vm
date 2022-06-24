@@ -28,7 +28,8 @@
 #     - oah.vscode
   tasks:
     - name: Include VM roles
-      include_role: "{{ item }}"
+      include_role: 
+        name: "{{ item }}"
       with_items:
         - "oah.bes"
         - "oah.chrome"
@@ -37,7 +38,8 @@
       when: environment is defined
     
     - name: Include L&F-Java-RT-env roles
-      include_role: "{{ item }}"
+      include_role: 
+        name: "{{ item }}"
       with_items:
         - "oah.threatdragon"
       when: environment is not defined
