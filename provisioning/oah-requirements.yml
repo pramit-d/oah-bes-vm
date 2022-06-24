@@ -23,3 +23,6 @@
 - src: https://github.com/Be-Secure/ansible-role-oah-vscode
   version: main
   name: oah.vscode
+- src: https://github.com/asa1997/ansible-role-oah-threatdragon
+  version: main
+  name: oah.threatdragon
