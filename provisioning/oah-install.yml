@@ -16,7 +16,7 @@
     # Will need the shell provision to install python-minimal first
     - name: Install python for Ansible
       become: yes
-      raw: test -e /usr/bin/python || (sudo apt -y update && apt install -y python-minimal)
+      raw: test -e /usr/bin/python || (sudo apt install -y python3-minimal)
     - include: tasks/init-debian.yml
       when: ansible_os_family == 'Debian'
 #   roles:
@@ -33,7 +33,7 @@
       with_items:
         - "oah.bes"
         - "oah.chrome"
-        - "oah.shell"
+        #- "oah.shell"
         - "oah.desktop"
       when: environment is defined
     

@@ -39,6 +39,7 @@ sudo apt-get install -y --no-install-recommends ansible
 
 mkdir -p $VHOME/$env_repo_name/roles
 ansible-galaxy install -r $VHOME/$env_repo_name/provisioning/oah-requirements.yml -p $VHOME/$env_repo_name/provisioning/roles
+echo "TEST Passed"
 ansible-playbook  --extra-vars "ansible_become_pass=vagrant"  $VHOME/$env_repo_name/provisioning/oah-install.yml
 SCRIPT
 
@@ -162,6 +163,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.ssh.username = vconfig['vagrant_user']
 
   Vagrant.configure("2") do |config|
+    config.vm.provision "ansible" do |ansible|
+      ansible.version = "2.14.4" # Specify the version you want to useend
+    end
     config.ssh.insert_key = true
     config.ssh.private_key_path = "~/.ssh/id_rsa"
     config.ssh.private_key_path = ['~/.vagrant.d/insecure_private_key', '~/.ssh/id_rsa']

@@ -1,5 +1,5 @@
 ---
-- name: Setting env variable
+Setting env variable:
   vars:
     environment: "{{ lookup('env','BESMAN_ENV') }}"
     
