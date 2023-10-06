@@ -41,6 +41,7 @@ vagrant_synced_folders: []
 # Memory and CPU to use for this VM.
 vagrant_memory: 2048
 vagrant_cpus: 1 
+video_memory: 128
 
 # # The web server software to use. Can be either 'apache' or 'nginx'.
 # oahvm_webserver: apache
