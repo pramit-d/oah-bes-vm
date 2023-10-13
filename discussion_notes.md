@@ -13,6 +13,6 @@
 6. Share the size of base box along with OS version number / Vagrant & Virtual Box release numbers.
 
 ## 13-Oct-2023
-1. Change Vagrant image to upgrade ubuntu version from 18.04 to 22.04 inside oah-bes-vm.
+1. Change Vagrant image to upgrade ubuntu version from 18.04 to 20.04/22.04 inside oah-bes-vm.
 2. Need to check if all the ansible roles are working well on a current ubuntu LTS version.
 3. Publish the size of the boxes as well , before and after installation of the roles in GBs.
