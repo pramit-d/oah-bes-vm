@@ -7,6 +7,7 @@
    (ii) **BeSLab Manager** (i.e. using oah-bes-vm to spin up a BeSlab in a box).
    oah-bes-vm helps BeSLab Manager & Security Analyst to analyse and do RT & BT activities of open-source projects. For example, BeSLab Manager is analysing multiple open-source projects using multiple static analysis tools (like SonarQube, Codeql, SBOM etc). After primary analysis Security Analyst will use oah-bes-vm to do RT & BT activities. It will be used to setup an isolated RT/BT env for an assigned open-source project.
    
-4. Publish **contributor guide** for maintainers of oah-bes-vm, oah-bes-vm installer, oah-installer & oah-shell.
+3. Publish **contributor guide** for maintainers of oah-bes-vm, oah-bes-vm installer, oah-installer & oah-shell.
+4. Do release all Ansible roles used in oah-bes-vm.
 5. Publish the list of Ansible roles used in oah-bes-vm along with their release date / version number as a markdown on GitHub for a table review.
 6. Share the size of base box along with OS version number / Vagrant & Virtual Box release numbers.
