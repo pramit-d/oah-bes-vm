@@ -11,3 +11,8 @@
 4. Do release all Ansible roles used in oah-bes-vm.
 5. Publish the list of Ansible roles used in oah-bes-vm along with their release date / version number as a markdown on GitHub for a table review.
 6. Share the size of base box along with OS version number / Vagrant & Virtual Box release numbers.
+
+## 13-Oct-2023
+1. Change Vagrant image to upgrade ubuntu version from 18.04 to 22.04 inside oah-bes-vm.
+2. Need to check if all the ansible roles are working well on a current ubuntu LTS version.
+3. Publish the size of the boxes as well , before and after installation of the roles in GBs.
