@@ -3,8 +3,6 @@
 oah_env_name: oah-bes-vm
 #GUI Flag
 oah_vm_gui: true
-# `vagrant_box` .
-#vagrant_box: OAH/ubuntu1404
 vagrant_box: "ubuntu/focal64"
 vagrant_user: vagrant
 oah_env_user: vagrant
