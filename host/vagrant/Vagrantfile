@@ -219,11 +219,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if which('ansible-playbook')
     # Provision using Ansible provisioner if Ansible is installed on host.
     config.vm.provision "shell", inline: $script
-    config.vm.provision "shell", inline: <<-SHELL
-      echo 'export PATH="$PATH:/root/.local/bin"' >> /root/.bashrc
-      source /root/.bashrc
+    config.vm.provision "PATH1", inline: <<-SHELL
+      echo 'export PATH="$PATH:/root/.local/bin"' >> /etc/bash.bashrc
+      source /etc/bash.bashrc
     SHELL
-
+    config.vm.provision "PATH2", inline: "echo 'export PATH=\"$PATH:/root/.local/bin\"' >> /etc/profile.d/ansible_path.sh"
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "#{dir}/provisioning/oah-install.yml"
       ansible.galaxy_role_file = "../../provisioning/oah-requirements.yml"
