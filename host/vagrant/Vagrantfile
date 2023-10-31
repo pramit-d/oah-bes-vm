@@ -85,12 +85,9 @@ chmod 700 /home/vagrant/.ssh
 ls -al /home/vagrant
 sudo apt update -y
 sudo apt full-upgrade -y
-sudo apt-get autoremove -y
-test -e /usr/bin/python || (sudo apt -y update && apt install -y python-minimal)
-
-sudo apt install python3-pip
+sudo apt install -y python3-pip
 python3 -m pip install --user ansible
-
+bash
 sudo systemctl disable apt-daily.service
 sudo systemctl disable apt-daily.timer
 SCRIPT
