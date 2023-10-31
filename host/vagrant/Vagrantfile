@@ -87,8 +87,8 @@ sudo apt update -y
 sudo apt full-upgrade -y
 sudo apt install -y python3-pip
 python3 -m pip install --user ansible
-echo 'export PATH="$PATH:'/home/vagrant/.local/bin'"' >> ~/.bashrc
-echo 'export PATH="$PATH:'/home/vagrant/.local/bin'"' >> ~/.zshrc
+echo 'export PATH="$PATH:'/root/.local/bin'"' >> ~/.bashrc
+echo 'export PATH="$PATH:'/root/.local/bin'"' >> ~/.zshrc
 bash
 sudo systemctl disable apt-daily.service
 sudo systemctl disable apt-daily.timer
