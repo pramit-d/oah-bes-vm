@@ -35,7 +35,16 @@ git config --global http.sslverify false
 git clone $OAH_GITHUB_URL/$env_repo_name.git
 sudo sed -i 's/archive/in.archive/g' /etc/apt/sources.list
 sudo apt-get update
-sudo apt-get install -y ansible
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.8
+sudo apt install python3-pip
+python3 -m pip install --user ansible
+
+echo 'export PATH="$PATH:'/home/vagrant/.local/bin'"' >> ~/.bashrc
+echo 'export PATH="$PATH:'/home/vagrant/.local/bin'"' >> ~/.zshrc
+bash
 
 mkdir -p $VHOME/$env_repo_name/roles
 ansible-galaxy install -r $VHOME/$env_repo_name/provisioning/oah-requirements.yml -p $VHOME/$env_repo_name/provisioning/roles
