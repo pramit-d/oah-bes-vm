@@ -87,6 +87,7 @@ sudo apt update -y
 sudo apt full-upgrade -y
 sudo apt install -y python3-pip
 python3 -m pip install --user ansible
+export PATH="$PATH:/root/.local/bin"
 echo 'export PATH="$PATH:'/root/.local/bin'"' >> ~/.bashrc
 echo 'export PATH="$PATH:'/root/.local/bin'"' >> ~/.zshrc
 bash
