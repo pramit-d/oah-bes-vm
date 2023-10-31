@@ -87,10 +87,6 @@ sudo apt update -y
 sudo apt full-upgrade -y
 sudo apt install -y python3-pip
 python3 -m pip install --user ansible
-export PATH="$PATH:/root/.local/bin"
-echo 'export PATH="$PATH:'/root/.local/bin'"' >> ~/.bashrc
-echo 'export PATH="$PATH:'/root/.local/bin'"' >> ~/.zshrc
-bash
 sudo systemctl disable apt-daily.service
 sudo systemctl disable apt-daily.timer
 SCRIPT
@@ -223,6 +219,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if which('ansible-playbook')
     # Provision using Ansible provisioner if Ansible is installed on host.
     config.vm.provision "shell", inline: $script
+    config.vm.provision "shell", inline: <<-SHELL
+      echo 'export PATH="$PATH:/root/.local/bin"' >> /root/.bashrc
+      source /root/.bashrc
+    SHELL
+
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "#{dir}/provisioning/oah-install.yml"
       ansible.galaxy_role_file = "../../provisioning/oah-requirements.yml"
