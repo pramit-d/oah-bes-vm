@@ -1,10 +1,6 @@
-## What is oah-bes-vm?
+![oah-bes-vm](./oah-bes-vm-logo-horizontal.png)
 
-A substrate that brings up bundles of BeS & other tools to perform Red Team & Blue Team activity. It offers bundles of BeS tools that would enable users to fast-track their Red Teaming / Blue Teaming activities by significantly reducing the effort spent on setting up respective environments. oah-bes-vm helps to isolate the installation of BeS projects in a specific environment. According to the needs, user can configure oah-bes-vm during installation.
-
-## Who are the end users?
-
-Red Team & Blue Team activists of Be-Secure community.
+A substrate that brings up bundles of BeS & other tools that would enable users to fast-track their Red Teaming and Blue Teaming activities by significantly reducing the effort spent on setting up respective environments. oah-bes-vm helps to isolate the installation of BeS projects in a specific environment. According to the needs, user can configure oah-bes-vm during installation.
 
 ### Red Team (RT)
 A group of people authorized and organized to emulate a potential adversary's attack or exploitation capabilities against an enterprise's security posture.
