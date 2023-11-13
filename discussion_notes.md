@@ -18,6 +18,6 @@
 3. Publish the size of the boxes as well , before and after installation of the roles in GBs.
 
 ## 10-Nov-2023
-1. Publish the **Use case diagram**. In the Use case diagram call out the different use case scenarios ie. for Security Analyst & BeSLab Manager for an Organization. List all actors. Use [this](https://c4model.com/review/) review checklist for reviews after doing the diagram. Name the files based on the role & scenario, i.e. SecurityAnalyst-<UseCaseName>.puml BeSlabmanager-<UseCaseName>.puml
+1. Publish the **Use case diagram**. In the Use case diagram call out the different use case scenarios ie. for Security Analyst & BeSLab Manager for an Organization. List all actors. Use [this](https://c4model.com/review/) review checklist for reviews after doing the diagram. Name the files based on the role & scenario, i.e. SecurityAnalyst-< UseCaseName >.puml BeSlabmanager-< UseCaseName >.puml
 2. Add **Deployment diagram**.
 3. Use .puml format to create diagrams. Create a design forder under docs & move the .puml inside it.
