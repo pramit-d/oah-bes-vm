@@ -32,10 +32,10 @@
         name: "{{ item }}"
       with_items:
         - "oah.ansible"
-        #- "oah.bes"
-        #- "oah.chrome"
+        - "oah.bes"
+        - "oah.chrome"
         #- "oah.shell"
-        #- "oah.desktop"
+        - "oah.desktop"
       when: environment is defined
     
     - name: Include L&F-Java-RT-env roles
