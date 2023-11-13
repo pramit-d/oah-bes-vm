@@ -8,3 +8,7 @@
 - src: https://github.com/Be-Secure/ansible-role-oah-chrome
   version: main
   name: oah.chrome
+- src: https://github.com/pramit-d/ansible-role-oah-ansible
+  version: main
+  name: oah.ansible
+

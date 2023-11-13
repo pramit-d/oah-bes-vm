@@ -31,6 +31,7 @@
       include_role: 
         name: "{{ item }}"
       with_items:
+        - "oah.ansible"
         #- "oah.bes"
         #- "oah.chrome"
         #- "oah.shell"
